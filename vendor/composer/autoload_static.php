@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit33b547187e3f9540f5c9289314da2691
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/peperoschach/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'Peperoschach\\' => 13,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Peperoschach\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/peperoschach/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -41,7 +51,8 @@ class ComposerStaticInit33b547187e3f9540f5c9289314da2691
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInit33b547187e3f9540f5c9289314da2691::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit33b547187e3f9540f5c9289314da2691::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit33b547187e3f9540f5c9289314da2691::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit33b547187e3f9540f5c9289314da2691::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit33b547187e3f9540f5c9289314da2691::$classMap;
 
