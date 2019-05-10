@@ -2,5 +2,6 @@
   RewriteEngine On
   RewriteCond %{SCRIPT_FILENAME} !-f
   RewriteCond %{SCRIPT_FILENAME} !-d
-  RewriteRule . index.php [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^ index.php [QSA,L]
 </IfModule>
