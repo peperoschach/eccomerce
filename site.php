@@ -56,5 +56,11 @@ $app->get("/products/:desurl", function($desurl)
         'product'=>$product->getValues(),
         'categories'=>$product->getCategories()
     ]);
+});
 
+$app->get("/cart", function(){
+
+    $page = new Page();
+
+    $page->setTpl("cart");
 });
